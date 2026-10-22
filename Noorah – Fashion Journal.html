@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Noorah – Fashion Journal</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F2F8;--ink:#2B1033;--soft:#6B5573;--card:#fff;--line:#E3D6E8;--gold:#F2B632;--rose:#E8A1B0;--sage:#A9C2AC;--plum:#2B1033;--onplum:#F7F2F8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17091C;--ink:#F3E9F5;--soft:#B8A3C0;--card:#241029;--line:#3A2442;--plum:#F2B632;--onplum:#2B1033;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17091C;--ink:#F3E9F5;--soft:#B8A3C0;--card:#241029;--line:#3A2442;--plum:#F2B632;--onplum:#2B1033;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+nav b{font:700 24px "Bodoni Moda",serif;letter-spacing:.02em}
+nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-weight:500}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{padding:28px 0 56px}
+.mark{font:700 clamp(84px,24vw,260px)/.85 "Bodoni Moda",serif;margin:0;letter-spacing:-.03em;color:var(--ink)}
+.mark i{font-weight:500;color:var(--rose)}
+.hero p{max-width:34ch;font-size:20px;color:var(--soft);margin:22px 0}
+.btn{display:inline-block;background:var(--plum);color:var(--onplum);border:0;padding:14px 26px;border-radius:999px;font:700 16px "DM Sans",sans-serif;cursor:pointer;text-decoration:none}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:6px 0 30px}
+.strip span{flex:0 0 auto;padding:10px 20px;border:1.5px solid var(--ink);border-radius:999px;font-weight:500}
+h2{font:700 clamp(30px,6vw,46px)/1.1 "Bodoni Moda",serif;margin:50px 0 22px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(6,1fr)}.p:nth-child(1){grid-column:span 4;min-height:340px}.p:nth-child(2){grid-column:span 2}.p:nth-child(n+3){grid-column:span 3}}
+.p{border-radius:22px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;min-height:230px;cursor:pointer;border:0;text-align:left;font:inherit;color:#2B1033}
+.p small{font-weight:700;opacity:.75}
+.p h3{font:700 27px/1.15 "Bodoni Moda",serif;margin:6px 0 8px}
+.p span{font-size:15px;opacity:.85}
+.c0{background:var(--gold)}.c1{background:var(--rose)}.c2{background:var(--sage)}.c3{background:#CDB8E6}.c4{background:#F4D6B8}
+.reader{display:none;position:fixed;inset:0;z-index:20;background:rgba(20,5,25,.6);padding:env(safe-area-inset-top,0px) 0 0;overflow:auto}
+.reader.on{display:block}
+.sheet{background:var(--bg);max-width:680px;margin:40px auto;border-radius:24px;padding:30px 24px}
+.sheet h3{font:700 36px/1.1 "Bodoni Moda",serif;margin:6px 0 16px}
+.sheet p{font-size:18px;line-height:1.75}
+.x{float:right;background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;font:500 15px "DM Sans"}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;margin-bottom:20px}
+input,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;margin:6px 0 12px}
+label{font-weight:500;font-size:15px}
+.two{display:grid;gap:20px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.note{color:var(--soft);font-size:15px;margin:4px 0 0}
+footer{padding:40px 0 30px;color:var(--soft);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="w">
+<nav><b>Noorah</b><div><a href="#journal">Journal</a><a href="#write">Write</a><a href="#join">Join</a></div></nav>
+
+<header class="hero">
+<h1 class="mark">Noor<i>ah</i></h1>
+<p>Everyday fashion, honest style notes and the stories behind what we wear.</p>
+<a class="btn" href="#journal">Read the journal</a>
+</header>
+
+<div class="strip" aria-label="Topics"><span>Street style</span><span>Wedding season</span><span>Lawn &amp; cotton</span><span>Thrift finds</span><span>Colour stories</span><span>Menswear</span></div>
+
+<section id="journal">
+<h2>Latest from the journal</h2>
+<div class="grid" id="posts"></div>
+</section>
+
+<section id="write">
+<h2>Write a new post</h2>
+<div class="box">
+<label for="t">Title</label><input id="t" placeholder="e.g. Five ways to wear a white kurta">
+<label for="g">Topic</label><input id="g" placeholder="e.g. Street style">
+<label for="b">Your post</label><textarea id="b" rows="6" placeholder="Write your story here…"></textarea>
+<button class="btn" id="pub">Publish post</button>
+<p class="note" id="msg">New posts are saved in this browser and appear at the top of the journal.</p>
+</div>
+</section>
+
+<section id="join" class="two">
+<div class="box"><h3 style="font:700 28px 'Bodoni Moda',serif;margin:0 0 8px">About Noorah</h3><p>Noorah means light. We write about clothes that feel good, fit real life and last longer than a trend. Every week: one outfit idea, one colour story and one honest review.</p></div>
+<div class="box"><h3 style="font:700 28px 'Bodoni Moda',serif;margin:0 0 8px">Get the weekly letter</h3><label for="e">Email</label><input id="e" type="email" placeholder="you@example.com"><button class="btn" id="sub">Subscribe</button><p class="note" id="smsg"></p></div>
+</section>
+
+<footer><span>© 2026 Noorah</span><span>Made with love for good clothes.</span></footer>
+</div>
+
+<div class="reader" id="reader" role="dialog" aria-modal="true"><div class="sheet"><button class="x" id="close">Close</button><small id="rg"></small><h3 id="rt"></h3><div id="rb"></div></div></div>
+
+<script>
+var seed=[
+{t:"How to build a capsule wardrobe in ten pieces",g:"Street style",b:"Start with what you already wear most. Pick two neutral trousers, two shirts, one kurta, one jacket and a pair of shoes you can walk in all day.\n\nThen add colour in small doses: a scarf, a dupatta or a bag. Ten pieces can make more than thirty outfits when everything works together."},
+{t:"Wedding season colours",g:"Wedding season",b:"Deep emerald, blush and marigold are leading this season. Choose one bold colour and keep the rest quiet so the outfit feels confident, not crowded."},
+{t:"Why lawn still wins in summer",g:"Lawn & cotton",b:"Light cotton breathes, washes easily and holds print beautifully. Look for tight weaves and colour that does not fade after the first wash."},
+{t:"Thrift shopping without the stress",g:"Thrift finds",b:"Check seams, zips and underarms first. Choose fabric over brand and always try it on. If you hesitate in the shop, leave it behind."},
+{t:"Menswear: the shirt that goes everywhere",g:"Menswear",b:"A well-cut oxford shirt in light blue works with jeans, chinos and a blazer. Buy it in a fabric that softens with every wash."}];
+var posts=seed.slice();
+try{var s=JSON.parse(localStorage.getItem("noorah_posts")||"[]");if(Array.isArray(s))posts=s.concat(seed)}catch(e){}
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(){var h="";posts.forEach(function(p,i){h+='<button class="p c'+(i%5)+'" data-i="'+i+'"><small>'+esc(p.g||"Journal")+'</small><h3>'+esc(p.t)+'</h3><span>'+esc(p.b.slice(0,90))+'…</span></button>'});document.getElementById("posts").innerHTML=h}
+document.getElementById("posts").addEventListener("click",function(ev){var b=ev.target.closest(".p");if(!b)return;var p=posts[+b.dataset.i];document.getElementById("rg").textContent=p.g||"Journal";document.getElementById("rt").textContent=p.t;document.getElementById("rb").innerHTML=p.b.split(/\n+/).map(function(x){return"<p>"+esc(x)+"</p>"}).join("");document.getElementById("reader").classList.add("on")});
+document.getElementById("close").onclick=function(){document.getElementById("reader").classList.remove("on")};
+document.getElementById("pub").onclick=function(){var t=document.getElementById("t").value.trim(),b=document.getElementById("b").value.trim(),g=document.getElementById("g").value.trim(),m=document.getElementById("msg");if(!t||!b){m.textContent="Add a title and some text before publishing.";return}posts.unshift({t:t,g:g,b:b});try{localStorage.setItem("noorah_posts",JSON.stringify(posts.filter(function(p){return seed.every(function(q){return q.t!==p.t})})))}catch(e){}render();["t","g","b"].forEach(function(i){document.getElementById(i).value=""});m.textContent="Published. Your post is now at the top of the journal."};
+document.getElementById("sub").onclick=function(){var e=document.getElementById("e").value.trim();document.getElementById("smsg").textContent=/.+@.+\..+/.test(e)?"Thank you for subscribing.":"Enter a valid email address."};
+render();
+</script>
+</body>
+</html>
